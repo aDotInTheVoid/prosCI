@@ -7,5 +7,7 @@ install:
   - sudo dpkg -i "$TEMP_DEB"
   - rm -f "$TEMP_DEB"
   
-script: make
+script: 
+ - pros conduct new .
+ - make
  

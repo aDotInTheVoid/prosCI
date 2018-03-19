@@ -8,7 +8,7 @@ install:
   - rm -f "$TEMP_DEB"
   - echo 'Y' > yes
 script: 
- - cat yes yes | pros conduct download
+ - cat yes yes | pros conduct download pros-mainline
  - pros conduct new .
  - make
  

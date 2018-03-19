@@ -7,8 +7,9 @@ install:
   - sudo dpkg -i "$TEMP_DEB"
   - rm -f "$TEMP_DEB"
   - echo 'Y' > yes
+  - pros conduct first-run
 script: 
- - cat yes yes | pros conduct download latest
+ #- cat yes yes | pros conduct download latest
  - pros conduct new .
  - make
  

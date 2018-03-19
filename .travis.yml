@@ -9,7 +9,7 @@ install:
   - rm -f "$TEMP_DEB"
   
 script: 
- - pros conduct download
+ - echoo 'Y' | pros conduct download
  - pros conduct new .
  - make
  

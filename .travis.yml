@@ -8,6 +8,6 @@ install:
   - rm -f "$TEMP_DEB"
   
 script: 
- - echo 'Y' | pros conduct new .
+ - echo 'Y\nY' | pros conduct new .
  - make
  

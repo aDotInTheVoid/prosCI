@@ -1,13 +1,18 @@
 language: c
-sudo: false
+sudo: true 
 dist: xenial
 
 
-addons:
-  apt:
-    packages:
-    - gcc-arm-none-eabi 
-    
+#addons:
+#  apt:
+#    packages:
+#    - gcc-arm-none-eabi 
+
+install:
+    - sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
+    - sudo apt-get update
+    - sudo apt-get install gcc-arm-embedded
+
 script: 
  #- cat yes yes | pros conduct download latest
  # - pros conduct new .

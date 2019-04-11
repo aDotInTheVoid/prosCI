@@ -1,15 +1,15 @@
 language: c
+sudo: false
+dist: xenial
 
-install:
-  - sudo apt-get install gcc-arm-none-eabi
-  - TEMP_DEB="$(mktemp)"
-  - wget -O "$TEMP_DEB" 'https://github.com/purduesigbots/pros/releases/download/2.12.1/pros-core-2.6.1-amd64.deb'
-  - sudo dpkg -i "$TEMP_DEB"
-  - rm -f "$TEMP_DEB"
-  - echo 'Y' > yes
-  - cat yes yes | sudo pros conduct download
+
+addons:
+  apt:
+    packages:
+    - gcc-arm-none-eabi 
+    
 script: 
  #- cat yes yes | pros conduct download latest
- - pros conduct new .
+ # - pros conduct new .
  - make
  
